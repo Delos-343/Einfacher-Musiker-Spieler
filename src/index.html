@@ -1,0 +1,58 @@
+ <!DOCTYPE html>  
+ <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <title> Einfacher Musiker-Spieler </title>
+    <link rel="icon" href="https://i.postimg.cc/gkf7Rdqp/Ilmu-Dewantara-CTO.png" type="image/png">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="http://fonts.cdnfonts.com/css/monument-extended" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/font-awesome.min.css">
+
+    <link
+        rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+        crossorigin="anonymous"
+      />
+  </head>
+  <body>  
+   <h1> Musik Spieler </h1>  
+   <div class="music-container" id="music-container">  
+    <div class="music-info">  
+      <em>
+        <center>
+          <h4 class="title" id="title"></h4>
+        </center>
+      </em>  
+     <div class="progress-container" id="progress-container">  
+      <div class="progress" id="progress"></div>  
+     </div>  
+    </div>  
+    <audio src="./music/${song}.mp3" id="audio"></audio>  
+    <div class="img-container">  
+     <img src="https://vignette.wikia.nocookie.net/halo/images/c/c3/Instalaci%C3%B3n_07_Halo_Fractures.png/revision/latest?cb=20170610032018&path-prefix=es" alt="music-cover" id="cover" width="25%" />  
+    </div>  
+    <div class="navigation">  
+     <button id="prev" class="action-btn">  
+      <i class="fa fa-backward" aria-hidden="true"></i>  
+     </button>  
+     <button id="play" class="action-btn action-btn-big">  
+      <i class="fa fa-play" aria-hidden="true"></i>  
+     </button>  
+     <button id="next" class="action-btn">  
+      <i class="fa fa-forward" aria-hidden="true"></i>  
+     </button>  
+    </div>  
+   </div>  
+   <script src="script.js"></script>  
+  </body>  
+ </html>  

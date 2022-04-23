@@ -1,0 +1,171 @@
+@import url('http://fonts.cdnfonts.com/css/monument-extended');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;700&family=Work+Sans&display=swap');
+  
+* {  
+  outline: none;  
+  box-sizing: border-box;  
+ }
+
+ body {  
+  background-color: #2b4162;
+  background-image: linear-gradient(315deg, #2b4162 0%, #12100e 74%);
+  -webkit-perspective: 1000px;  
+      perspective: 1000px;  
+  -webkit-transform-style: preserve-3d;  
+      transform-style: preserve-3d;   
+  font-family: 'Monument Extended', sans-serif; 
+  font-style: normal;
+  font-weight: 800;
+  margin: 0;  
+  height: 100vh;  
+  display: flex;  
+  align-items: center;  
+  justify-content: center;  
+  flex-direction: column;  
+ }
+
+h1 {
+  color: #F1F1F1;
+}
+
+ .music-container {  
+  backdrop-filter: blur(25px) saturate(99%);
+  -webkit-backdrop-filter: blur(25px) saturate(99%);
+  background-color: rgba(12, 12, 12, 0.65);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125); 
+  display: flex;  
+  padding: 20px 30px;  
+  position: relative;  
+  margin: 100px 0;  
+  z-index: 10;  
+ }
+
+ .img-container {  
+  position: relative;  
+  width: 110px;  
+ }
+
+ .img-container::after {  
+  content: "";  
+  background-color: #F1F1F1;  
+  background-image: linear-gradient(315deg, #2b4162 0%, #12100e 74%);
+  -webkit-perspective: 1000px;  
+      perspective: 1000px;  
+  -webkit-transform-style: preserve-3d; 
+  border-radius: 50%;  
+  position: absolute;  
+  bottom: 200%;  
+  left: 50%;  
+  width: 18px;  
+  height: 18px;  
+  transform: translate(-50%, 50%);  
+  box-shadow: 0 0 0px 1px #87CEEB;  
+  opacity: 75%;
+ }
+
+ .img-container img {  
+  border-radius: 50%;  
+  object-fit: cover;  
+  height: 110px;  
+  width: inherit;  
+  position: absolute;  
+  bottom: 0;  
+  left: 0;  
+  box-shadow: 0 0 0px 1px #87CEEB;
+  animation: rotate 3s linear infinite;  
+  animation-play-state: paused;  
+  opacity: 80%;
+ }
+
+ .music-container.play .img-container img {  
+  animation-play-state: running;  
+  opacity: 1;
+ }
+
+ @keyframes rotate {  
+  from {  
+   transform: rotate(0deg);  
+  }  
+  to {  
+   transform: rotate(360deg);  
+  }  
+ }
+
+ .navigation {  
+  display: flex;  
+  align-items: center;  
+  justify-content: center;  
+  z-index: 1;
+ }
+
+ .action-btn {  
+  backdrop-filter: blur(25px) saturate(99%);
+  -webkit-backdrop-filter: blur(25px) saturate(99%);
+  background-color: inherit;
+  width: 100%;
+  border: 0;  
+  color: #C0C0C0;  
+  font-size: 20px;  
+  cursor: pointer;  
+  padding: 10px auto;  
+  margin: 0 20px;  
+  opacity: 1;
+ }
+
+.action-btn:hover, .action-btn-big:hover {
+  background-color: #0C0C0C;  
+  color: #FFD700;  
+  transition: all 1s ease-out;
+}
+
+ .action-btn .action-btn-big {  
+  color: #C0C0C0;  
+  font-size: 30px;  
+ }
+
+ .music-info {  
+  backdrop-filter: blur(25px) saturate(99%);
+  -webkit-backdrop-filter: blur(25px) saturate(99%);
+  background-color: rgba(12, 12, 12, 0.65);
+  color: #FFD700;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+  width: calc(100% - 40px);  
+  padding: 10px 10px 10px 150px;  
+  border-radius: 15px 15px 0px 0px;  
+  position: absolute;  
+  top: 0;  
+  left: 20px;  
+  opacity: 0;  
+  transform: translateY(0%);  
+  transition: transform 0.3s ease-in, opacity 0.3s ease-in;  
+  z-index: 0;  
+ }  
+
+ .music-container.play .music-info {  
+  opacity: 90%;  
+  transform: translateY(-100%);  
+ }  
+
+ .music-info h4 {  
+  margin: 0;  
+ }  
+
+ .progress-container {  
+  background-color: #fff;  
+  border: 5px;  
+  cursor: pointer;  
+  margin: 10px 0;  
+  height: 4px;  
+  width: 100%;  
+ }  
+
+ .progress {  
+  background-color: #fe8daa;  
+  border-radius: 5px;  
+  height: 100%;  
+  width: 0%;  
+  transform: width 0.1s linear;  
+ }
